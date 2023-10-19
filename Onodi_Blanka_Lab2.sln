@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onodi_Blanka_Lab2", "Onodi_Blanka_Lab2.csproj", "{A39D7FDB-AF37-4E23-B158-974BA5A57D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39D7FDB-AF37-4E23-B158-974BA5A57D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39D7FDB-AF37-4E23-B158-974BA5A57D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39D7FDB-AF37-4E23-B158-974BA5A57D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39D7FDB-AF37-4E23-B158-974BA5A57D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B83E79-B986-428F-A61E-C891C7B26715}
+	EndGlobalSection
+EndGlobal
