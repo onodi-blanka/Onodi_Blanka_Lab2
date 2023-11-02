@@ -46,10 +46,10 @@
     <h3>Books Edited by Selected Publisher</h3>
     <table class="table">
 
-        @foreach (var item in Model.PublisherData.Publishers)
+        @foreach (var publisher in Model.PublisherData.Publishers)
         {
             string selectedRow = "";
-            if (item.ID == Model.PublisherID)
+            if (publisher.ID == Model.PublisherID)
             {
                 selectedRow = "table-success";
             }
@@ -57,10 +57,10 @@
 
                 <td>
                     @{
-                        foreach (var b in item.Books)
+                        foreach (var book in publisher.Books)
                         {
 
-                            @b.Title @: @b.Author.FullName
+                            @book.Title @: @book.Author.FullName
 
                             <br />
                         }
