@@ -1,4 +1,6 @@
-﻿namespace Onodi_Blanka_Lab2.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Onodi_Blanka_Lab2.Models
 {
     public class Author
     {
