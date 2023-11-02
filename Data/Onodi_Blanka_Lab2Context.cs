@@ -19,5 +19,7 @@ namespace Onodi_Blanka_Lab2.Data
         public DbSet<Onodi_Blanka_Lab2.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Onodi_Blanka_Lab2.Models.Author>? Author { get; set; }
+
+        public DbSet<Onodi_Blanka_Lab2.Models.Category>? Category { get; set; }
     }
 }
