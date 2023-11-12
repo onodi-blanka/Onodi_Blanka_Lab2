@@ -36,10 +36,15 @@ namespace Onodi_Blanka_Lab2.Pages.Borrowings
                 return NotFound();
             }
             Borrowing = borrowing;
-           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "ID");
+           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "FullName");
+            ViewData["BookID"] = new SelectList(_context.Book.Include(b => b.Author).Select(b =>
+         new {
+             ID = b.ID,
+             Details = b.ID + " - " +  b.Title + " - " + b.Author.FirstName + " " + b.Author.LastName + " - " + b.Price
+         }), "ID", "Details") ;
             return Page();
         }
-
+        
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()

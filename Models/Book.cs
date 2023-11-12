@@ -26,7 +26,14 @@ namespace Onodi_Blanka_Lab2.Models
 
         public int? BorrowingID { get; set; }
         public Borrowing? Borrowing { get; set; }
-
+        [Display(Name = "Details")]
+        public string? Details
+        {
+            get
+            {
+                return Title + " - " + Price;
+            }
+        }
         public ICollection<BookCategory>? BookCategories { get; set; }
     }
 }

@@ -29,7 +29,11 @@ namespace Onodi_Blanka_Lab2.Pages.Borrowings
                 return NotFound();
             }
 
-            var borrowing = await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
+            var borrowing = await _context.Borrowing
+      .Include(b => b.Member)  // Include detaliile despre Member
+      .Include(b => b.Book)     // Include detaliile despre Book
+          .ThenInclude(book => book.Author)     // Include detaliile despre Book
+      .FirstOrDefaultAsync(m => m.ID == id);
 
             if (borrowing == null)
             {
