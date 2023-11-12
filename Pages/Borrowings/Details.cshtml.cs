@@ -19,7 +19,7 @@ namespace Onodi_Blanka_Lab2.Pages.Borrowings
             _context = context;
         }
 
-      public Borrowing Borrowing { get; set; } = default!; 
+        public Borrowing Borrowing { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,12 +28,18 @@ namespace Onodi_Blanka_Lab2.Pages.Borrowings
                 return NotFound();
             }
 
-            var borrowing = await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
+            // Modificarea incepe aici
+            var borrowing = await _context.Borrowing
+                .Include(b => b.Member)  // Include detaliile despre Member
+                .Include(b => b.Book)     // Include detaliile despre Book
+                    .ThenInclude(book => book.Author)     // Include detaliile despre Book
+                .FirstOrDefaultAsync(m => m.ID == id);
+
             if (borrowing == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Borrowing = borrowing;
             }

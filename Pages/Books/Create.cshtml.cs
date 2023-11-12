@@ -19,7 +19,7 @@ namespace Onodi_Blanka_Lab2.Pages.Books
         }
         public IActionResult OnGet()
         {
-            /* var authorList = _context.Author.Select(x => new
+            /*var authorList = _context.Author.Select(x => new
              {
              x.ID,
              FullName = x.LastName + " " + x.FirstName
